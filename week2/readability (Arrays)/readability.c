@@ -22,7 +22,12 @@ int main(void)
     int index = round(0.0588 * letters / words * 100 - 0.296 * sentences / words * 100 - 15.8);
 
     // Output the grade level
-    
+    if (index < 1)
+        printf("Before Grade 1\n");
+    else if (index >= 16)
+        printf("Grade 16+\n");
+    else
+        printf("Grade %d\n", index);
 
     return 0;
 }
